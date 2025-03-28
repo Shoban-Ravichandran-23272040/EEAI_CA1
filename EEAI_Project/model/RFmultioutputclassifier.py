@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 from model.base import BaseModel
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
 from numpy import *
 import random
 num_folds = 0

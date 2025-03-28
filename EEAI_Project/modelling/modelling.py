@@ -37,7 +37,7 @@ def model_predict(data, df, name):
             }
             results.append(result)
             
-            # Gather metrics for tabulation (assuming these methods exist in your model)
+            # Gather metrics for tabulation
             accuracy = model.get_accuracy(data) if hasattr(model, 'get_accuracy') else 'N/A'
             accuracy = f"{accuracy:.2f} %" if isinstance(accuracy, (int, float)) else accuracy
 

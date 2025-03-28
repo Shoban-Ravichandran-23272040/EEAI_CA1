@@ -34,7 +34,7 @@ class MultiOutputSGDClassifier(BaseModel):
         self.embeddings = embeddings
         self.y = y
         # Initialize SGD classifier with multi-output wrapper
-        base_sgd = SGDClassifier(loss='log_loss',  # or 'hinge' for SVM
+        base_sgd = SGDClassifier(loss='log_loss',  
                                penalty='l2',
                                alpha=0.0001,
                                max_iter=1000,
@@ -72,5 +72,4 @@ class MultiOutputSGDClassifier(BaseModel):
             accuracy.append(correct / len(true))
         return np.mean(accuracy)*100
     def data_transform(self) -> None:
-        # Add any necessary data transformation logic here
         pass
